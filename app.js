@@ -1,37 +1,51 @@
-
+var clotheskind;
+var imagestyle="";
+var outpices="";
+function starting(){
 alert ("please chooese which king of clothes you want");
-var clotheskind= prompt("Enter the type  T-shirt Or jacket ");
+ clotheskind= prompt("Enter the type  T-shirt Or jacket ");
+}
+starting();
 
+
+function clothes(){
 while(clotheskind !="t-shirt" && clotheskind !="jacket"){
     alert("pleas chooes the correct value:");
-    var clotheskind=prompt("Enter the type T-shirt Or jacket")
+     clotheskind=prompt("Enter the type T-shirt Or jacket")
 }
 
 alert("you are chooes the " + clotheskind);
 
-var imagestyle="";
+ 
 if(clotheskind== "jacket" ){
     
         document.write('<img src="/images/jacket.jpg" />');
 
-        imagestyle= imagestyle+ '<img src="/images/jacket1.jpg" />';
+        imagestyle= '<img src="/images/jacket1.JPG" />';
     }
 else{
          document.write('<img src="/images/t-shirt.jpg" />');
 
-         imagestyle='<img src="images/t-shirt1.JPG" />';
+         imagestyle='<img src="/images/t-shirt1.JPG" />';
+}
 }
 
+clothes();
+
+function number(){
 var num=prompt("please enter the number of pices:");
-var outpices="";
+
+outpices="";
 
 
  for(var i=0;i<num;i++)
  {
-    console.log('test '+imagestyle);
+    console.log(imagestyle);
     outpices=outpices+imagestyle;
 
  }
+}
+number();
  
  document.write(outpices);
 
